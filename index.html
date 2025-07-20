@@ -56,17 +56,20 @@
                         <a href="#experience" class="btn btn-secondary">Learn More</a>
                     </div>
                 </div>
-                <div class="hero-visual">
+                                <div class="hero-visual">
+                    <div class="hero-image">
+                        <img src="images/IMG_5310.JPG" alt="Jared working on hardware projects" class="profile-image">
+                    </div>
                     <div class="floating-elements">
-                                        <div class="floating-card" data-speed="2">
-                    <i class="fas fa-microchip"></i>
-                </div>
-                <div class="floating-card" data-speed="1.5">
-                    <i class="fas fa-cogs"></i>
-                </div>
-                <div class="floating-card" data-speed="2.5">
-                    <i class="fas fa-robot"></i>
-                </div>
+                        <div class="floating-card" data-speed="2">
+                            <i class="fas fa-microchip"></i>
+                        </div>
+                        <div class="floating-card" data-speed="1.5">
+                            <i class="fas fa-cogs"></i>
+                        </div>
+                        <div class="floating-card" data-speed="2.5">
+                            <i class="fas fa-robot"></i>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -84,39 +87,14 @@
                 <p class="section-subtitle">Here are some of my microcontroller and automation projects</p>
             </div>
             <div class="projects-grid">
-                <div class="project-card" data-category="embedded">
-                    <div class="project-image">
-                        <div class="project-overlay">
-                            <div class="project-links">
-                                <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
-                                <a href="#" class="project-link"><i class="fab fa-github"></i></a>
-                            </div>
-                        </div>
-                        <div class="project-placeholder">
-                            <i class="fas fa-microchip"></i>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Smart Home Automation System</h3>
-                        <p class="project-description">
-                            An Arduino-based home automation system with sensor integration and wireless control. 
-                            Features include temperature monitoring, automated lighting, and mobile app interface.
-                        </p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Arduino</span>
-                            <span class="tech-tag">C++</span>
-                            <span class="tech-tag">Sensors</span>
-                            <span class="tech-tag">IoT</span>
-                        </div>
-                    </div>
-                </div>
 
-                <div class="project-card" data-category="automation">
+
+                <div class="project-card" data-category="automation" onclick="window.location.href='projects/plant-watering.html'">
                     <div class="project-image">
                         <div class="project-overlay">
                             <div class="project-links">
-                                <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
-                                <a href="#" class="project-link"><i class="fab fa-github"></i></a>
+                                <a href="projects/plant-watering.html" class="project-link" onclick="event.stopPropagation()"><i class="fas fa-external-link-alt"></i></a>
+                                <a href="#" class="project-link" onclick="event.stopPropagation()"><i class="fab fa-github"></i></a>
                             </div>
                         </div>
                         <div class="project-placeholder">
@@ -135,15 +113,18 @@
                             <span class="tech-tag">GPIO</span>
                             <span class="tech-tag">Sensors</span>
                         </div>
+                        <div class="project-arrow">
+                            <i class="fas fa-arrow-right"></i>
+                        </div>
                     </div>
                 </div>
 
-                <div class="project-card" data-category="hardware">
+                <div class="project-card" data-category="hardware" onclick="window.location.href='projects/motor-controller.html'">
                     <div class="project-image">
                         <div class="project-overlay">
                             <div class="project-links">
-                                <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
-                                <a href="#" class="project-link"><i class="fab fa-github"></i></a>
+                                <a href="projects/motor-controller.html" class="project-link" onclick="event.stopPropagation()"><i class="fas fa-external-link-alt"></i></a>
+                                <a href="#" class="project-link" onclick="event.stopPropagation()"><i class="fab fa-github"></i></a>
                             </div>
                         </div>
                         <div class="project-placeholder">
@@ -162,15 +143,18 @@
                             <span class="tech-tag">PWM</span>
                             <span class="tech-tag">PID Control</span>
                         </div>
+                        <div class="project-arrow">
+                            <i class="fas fa-arrow-right"></i>
+                        </div>
                     </div>
                 </div>
 
-                <div class="project-card" data-category="embedded">
+                <div class="project-card" data-category="embedded" onclick="window.location.href='projects/environmental-monitoring.html'">
                     <div class="project-image">
                         <div class="project-overlay">
                             <div class="project-links">
-                                <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
-                                <a href="#" class="project-link"><i class="fab fa-github"></i></a>
+                                <a href="projects/environmental-monitoring.html" class="project-link" onclick="event.stopPropagation()"><i class="fas fa-external-link-alt"></i></a>
+                                <a href="#" class="project-link" onclick="event.stopPropagation()"><i class="fab fa-github"></i></a>
                             </div>
                         </div>
                         <div class="project-placeholder">
@@ -188,6 +172,9 @@
                             <span class="tech-tag">C++</span>
                             <span class="tech-tag">WiFi</span>
                             <span class="tech-tag">IoT</span>
+                        </div>
+                        <div class="project-arrow">
+                            <i class="fas fa-arrow-right"></i>
                         </div>
                     </div>
                 </div>
@@ -280,7 +267,7 @@
                 <p class="section-subtitle">What I'm passionate about beyond coding</p>
             </div>
             <div class="interests-grid">
-                <div class="interest-card">
+                <div class="interest-card" onclick="window.location.href='interests/rock-climbing.html'">
                     <div class="interest-icon">
                         <i class="fas fa-mountain"></i>
                     </div>
@@ -290,9 +277,12 @@
                         It's like solving a physical puzzle while building strength and mental focus. 
                         Both indoor and outdoor climbing keep me motivated and push my limits.
                     </p>
+                    <div class="interest-arrow">
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
                 </div>
 
-                <div class="interest-card">
+                <div class="interest-card" onclick="window.location.href='interests/video-games.html'">
                     <div class="interest-icon">
                         <i class="fas fa-gamepad"></i>
                     </div>
@@ -302,9 +292,12 @@
                         I enjoy everything from competitive multiplayer games to story-driven RPGs. 
                         It's a great way to unwind and connect with friends online.
                     </p>
+                    <div class="interest-arrow">
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
                 </div>
 
-                <div class="interest-card">
+                <div class="interest-card" onclick="window.location.href='interests/swimming.html'">
                     <div class="interest-icon">
                         <i class="fas fa-swimming-pool"></i>
                     </div>
@@ -314,9 +307,12 @@
                         about being in the water - it's a great way to clear my mind and stay fit. 
                         I love both pool laps and open water swimming.
                     </p>
+                    <div class="interest-arrow">
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
                 </div>
 
-                <div class="interest-card">
+                <div class="interest-card" onclick="window.location.href='interests/hiking.html'">
                     <div class="interest-icon">
                         <i class="fas fa-hiking"></i>
                     </div>
@@ -326,9 +322,12 @@
                         Hiking helps me stay grounded and find inspiration for creative solutions. 
                         I love discovering new trails and capturing beautiful landscapes.
                     </p>
+                    <div class="interest-arrow">
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
                 </div>
 
-                <div class="interest-card">
+                <div class="interest-card" onclick="window.location.href='interests/cooking.html'">
                     <div class="interest-icon">
                         <i class="fas fa-utensils"></i>
                     </div>
@@ -338,9 +337,12 @@
                         new recipes and flavors - it's like debugging code but with delicious results. 
                         From simple weeknight meals to complex dishes, I enjoy the entire process.
                     </p>
+                    <div class="interest-arrow">
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
                 </div>
 
-                <div class="interest-card">
+                <div class="interest-card" onclick="window.location.href='interests/travel.html'">
                     <div class="interest-icon">
                         <i class="fas fa-plane"></i>
                     </div>
@@ -350,9 +352,12 @@
                         helps me design more inclusive solutions. I love immersing myself in 
                         different environments and learning from diverse experiences.
                     </p>
+                    <div class="interest-arrow">
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
                 </div>
 
-                <div class="interest-card">
+                <div class="interest-card" onclick="window.location.href='interests/board-games.html'">
                     <div class="interest-icon">
                         <i class="fas fa-dice"></i>
                     </div>
@@ -362,6 +367,9 @@
                         I enjoy everything from cooperative games to competitive strategy games. 
                         They're a great way to spend time with friends and family while exercising the mind.
                     </p>
+                    <div class="interest-arrow">
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
                 </div>
             </div>
         </div>

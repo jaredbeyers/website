@@ -204,16 +204,43 @@ body {
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
 }
 
-/* Floating Elements */
+/* Hero Image */
 .hero-visual {
     position: relative;
     height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.floating-elements {
+.hero-image {
     position: relative;
+    z-index: 2;
+    margin-bottom: 2rem;
+}
+
+.profile-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+}
+
+.profile-image:hover {
+    transform: scale(1.05);
+    border-color: rgba(255, 255, 255, 0.6);
+}
+
+/* Floating Elements */
+.floating-elements {
+    position: absolute;
     width: 100%;
     height: 100%;
+    top: 0;
+    left: 0;
 }
 
 .floating-card {
@@ -331,6 +358,8 @@ body {
     transition: all 0.3s ease;
     opacity: 0;
     transform: translateY(30px);
+    cursor: pointer;
+    position: relative;
 }
 
 .project-card.visible {
@@ -341,6 +370,21 @@ body {
 .project-card:hover {
     transform: translateY(-10px);
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.project-card:hover .project-arrow {
+    transform: translateX(5px);
+    opacity: 1;
+}
+
+.project-arrow {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    color: #667eea;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+    opacity: 0.7;
 }
 
 .project-image {
@@ -579,6 +623,9 @@ body {
     transition: all 0.3s ease;
     opacity: 0;
     transform: translateY(30px);
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
 }
 
 .interest-card.visible {
@@ -589,6 +636,21 @@ body {
 .interest-card:hover {
     transform: translateY(-10px);
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.interest-card:hover .interest-arrow {
+    transform: translateX(5px);
+    opacity: 1;
+}
+
+.interest-arrow {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    color: #667eea;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+    opacity: 0.7;
 }
 
 .interest-icon {
@@ -767,6 +829,17 @@ body {
         grid-template-columns: 1fr;
         text-align: center;
         gap: 2rem;
+    }
+    
+    .hero-visual {
+        flex-direction: column;
+        height: auto;
+        padding: 2rem 0;
+    }
+    
+    .profile-image {
+        width: 150px;
+        height: 150px;
     }
 
     .hero-title {
