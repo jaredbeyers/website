@@ -5,21 +5,24 @@ if (window.location.pathname.endsWith('index.html') || window.location.pathname.
     });
 
     window.addEventListener('load', () => {
-        window.scrollTo(0, 0);
-    });
-    
-    // Force scroll to top on DOMContentLoaded as well
-    document.addEventListener('DOMContentLoaded', () => {
-        window.scrollTo(0, 0);
-        // Also clear any hash in the URL
-        if (window.location.hash) {
-            history.replaceState(null, null, window.location.pathname);
+        // Only scroll to top if there's no hash in the URL
+        if (!window.location.hash) {
+            window.scrollTo(0, 0);
         }
     });
     
-    // Additional safety: scroll to top after a short delay
+    // Force scroll to top on DOMContentLoaded as well (only if no hash)
+    document.addEventListener('DOMContentLoaded', () => {
+        if (!window.location.hash) {
+            window.scrollTo(0, 0);
+        }
+    });
+    
+    // Additional safety: scroll to top after a short delay (only if no hash)
     setTimeout(() => {
-        window.scrollTo(0, 0);
+        if (!window.location.hash) {
+            window.scrollTo(0, 0);
+        }
     }, 100);
 }
 
@@ -43,6 +46,54 @@ function smoothNavigateTo(url) {
     }, 300);
 }
 
+// Copy email to clipboard function
+function copyEmail(event) {
+    event.preventDefault();
+    const email = 'jaredcbeyers@gmail.com';
+    
+    navigator.clipboard.writeText(email).then(() => {
+        showCopyNotification();
+    }).catch(err => {
+        console.error('Failed to copy email: ', err);
+        // Fallback for older browsers
+        const textArea = document.createElement('textarea');
+        textArea.value = email;
+        document.body.appendChild(textArea);
+        textArea.select();
+        document.execCommand('copy');
+        document.body.removeChild(textArea);
+        
+        showCopyNotification();
+    });
+}
+
+// Show copy notification
+function showCopyNotification() {
+    // Create notification element
+    const notification = document.createElement('div');
+    notification.className = 'copy-notification';
+    notification.innerHTML = `
+        <i class="fas fa-check"></i>
+        <span>Email copied to clipboard!</span>
+    `;
+    
+    // Add to page
+    document.body.appendChild(notification);
+    
+    // Show notification
+    setTimeout(() => {
+        notification.classList.add('show');
+    }, 100);
+    
+    // Remove notification after 3 seconds
+    setTimeout(() => {
+        notification.classList.remove('show');
+        setTimeout(() => {
+            document.body.removeChild(notification);
+        }, 300);
+    }, 3000);
+}
+
 // Add smooth navigation to interest cards
 document.addEventListener('DOMContentLoaded', () => {
     const interestCards = document.querySelectorAll('.interest-card');
@@ -62,13 +113,13 @@ document.addEventListener('DOMContentLoaded', () => {
         const targetSection = document.querySelector(targetId);
         
         if (targetSection) {
-            // Wait a bit for the page to fully load, then scroll
+            // Wait longer for the page to fully load, then scroll
             setTimeout(() => {
                 targetSection.scrollIntoView({
                     behavior: 'smooth',
                     block: 'start'
                 });
-            }, 500);
+            }, 1000);
         }
     }
     
