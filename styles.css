@@ -337,12 +337,20 @@ body {
 }
 
 .projects-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    display: flex;
+    flex-direction: row;
     gap: 2rem;
-    opacity: 0;
-    transform: translateY(50px);
-    transition: all 0.8s ease;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: nowrap;
+}
+
+@media (max-width: 1000px) {
+    .projects-grid {
+        flex-direction: column;
+        gap: 2rem;
+        align-items: stretch;
+    }
 }
 
 .projects-grid.visible {

@@ -87,98 +87,83 @@
                 <p class="section-subtitle">Here are some of my microcontroller and automation projects</p>
             </div>
             <div class="projects-grid">
-
-
-                <div class="project-card" data-category="automation" onclick="window.location.href='projects/plant-watering.html'">
-                    <div class="project-image">
-                        <div class="project-overlay">
-                            <div class="project-links">
-                                <a href="projects/plant-watering.html" class="project-link" onclick="event.stopPropagation()"><i class="fas fa-external-link-alt"></i></a>
-                                <a href="#" class="project-link" onclick="event.stopPropagation()"><i class="fab fa-github"></i></a>
+                    <!-- RFID-Based Access Control System -->
+                    <div class="project-card" data-category="hardware">
+                        <div class="project-image">
+                            <div class="project-placeholder">
+                                <i class="fas fa-id-card"></i>
                             </div>
                         </div>
-                        <div class="project-placeholder">
-                            <i class="fas fa-robot"></i>
+                        <div class="project-content">
+                            <h3 class="project-title">RFID-Based Access Control System</h3>
+                            <div class="project-meta">
+                                <span class="project-date">July 2025 – Present</span>
+                                <span class="project-tech">
+                                    <span class="tech-tag">Arduino</span>
+                                    <span class="tech-tag">MFRC522</span>
+                                    <span class="tech-tag">C++</span>
+                                </span>
+                            </div>
+                            <ul class="project-bullets">
+                                <li>Built secure RFID door lock with Arduino and MFRC522.</li>
+                                <li>Managed user access with EEPROM storage and LED feedback.</li>
+                                <li>Added LCD, buzzer, and real-time access logging.</li>
+                            </ul>
                         </div>
                     </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Automated Plant Watering System</h3>
-                        <p class="project-description">
-                            A Raspberry Pi-based automated plant care system with soil moisture sensors, 
-                            automated watering, and environmental monitoring. Includes data logging and alerts.
-                        </p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Raspberry Pi</span>
-                            <span class="tech-tag">Python</span>
-                            <span class="tech-tag">GPIO</span>
-                            <span class="tech-tag">Sensors</span>
+
+                    <!-- Tweeting Bird Feeder -->
+                    <div class="project-card" data-category="iot">
+                        <div class="project-image">
+                            <div class="project-placeholder">
+                                <i class="fas fa-dove"></i>
+                            </div>
                         </div>
-                        <div class="project-arrow">
-                            <i class="fas fa-arrow-right"></i>
+                        <div class="project-content">
+                            <h3 class="project-title">Tweeting Bird Feeder</h3>
+                            <div class="project-meta">
+                                <span class="project-date">May 2025 – Jul 2025</span>
+                                <span class="project-tech">
+                                    <span class="tech-tag">ESP32-CAM</span>
+                                    <span class="tech-tag">Raspberry Pi</span>
+                                    <span class="tech-tag">Python</span>
+                                    <span class="tech-tag">OpenCV</span>
+                                    <span class="tech-tag">Twitter API</span>
+                                </span>
+                            </div>
+                            <ul class="project-bullets">
+                                <li>Created IoT bird feeder that tweets bird photos.</li>
+                                <li>Used ESP32-CAM for wireless image capture and motion detection.</li>
+                                <li>Identified bird species with iNaturalist API and filtered out squirrels.</li>
+                                <li>Automated tweets with Python and Tweepy.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Skull King Card Game -->
+                    <div class="project-card" data-category="software">
+                        <div class="project-image">
+                            <div class="project-placeholder">
+                                <i class="fas fa-chess-knight"></i>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">Skull King – Turn-Based Card Game</h3>
+                            <div class="project-meta">
+                                <span class="project-date">2025</span>
+                                <span class="project-tech">
+                                    <span class="tech-tag">TypeScript</span>
+                                </span>
+                            </div>
+                            <ul class="project-bullets">
+                                <li>Developed a digital version of Skull King with TypeScript.</li>
+                                <li>Implemented turn-based multiplayer logic and score tracking.</li>
+                                <li>Designed interactive UI for bidding, playing, and round resolution.</li>
+                                <li>Added game rules enforcement and win condition logic.</li>
+                            </ul>
                         </div>
                     </div>
                 </div>
-
-                <div class="project-card" data-category="hardware" onclick="window.location.href='projects/motor-controller.html'">
-                    <div class="project-image">
-                        <div class="project-overlay">
-                            <div class="project-links">
-                                <a href="projects/motor-controller.html" class="project-link" onclick="event.stopPropagation()"><i class="fas fa-external-link-alt"></i></a>
-                                <a href="#" class="project-link" onclick="event.stopPropagation()"><i class="fab fa-github"></i></a>
-                            </div>
-                        </div>
-                        <div class="project-placeholder">
-                            <i class="fas fa-cogs"></i>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Custom Motor Controller</h3>
-                        <p class="project-description">
-                            Designed and built a custom motor controller using STM32 microcontroller. 
-                            Features PWM control, PID feedback loops, and real-time motor speed regulation.
-                        </p>
-                        <div class="project-tech">
-                            <span class="tech-tag">STM32</span>
-                            <span class="tech-tag">C++</span>
-                            <span class="tech-tag">PWM</span>
-                            <span class="tech-tag">PID Control</span>
-                        </div>
-                        <div class="project-arrow">
-                            <i class="fas fa-arrow-right"></i>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card" data-category="embedded" onclick="window.location.href='projects/environmental-monitoring.html'">
-                    <div class="project-image">
-                        <div class="project-overlay">
-                            <div class="project-links">
-                                <a href="projects/environmental-monitoring.html" class="project-link" onclick="event.stopPropagation()"><i class="fas fa-external-link-alt"></i></a>
-                                <a href="#" class="project-link" onclick="event.stopPropagation()"><i class="fab fa-github"></i></a>
-                            </div>
-                        </div>
-                        <div class="project-placeholder">
-                            <i class="fas fa-thermometer-half"></i>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Environmental Monitoring System</h3>
-                        <p class="project-description">
-                            ESP32-based environmental monitoring system with multiple sensors. 
-                            Tracks temperature, humidity, air quality, and sends data to cloud storage.
-                        </p>
-                        <div class="project-tech">
-                            <span class="tech-tag">ESP32</span>
-                            <span class="tech-tag">C++</span>
-                            <span class="tech-tag">WiFi</span>
-                            <span class="tech-tag">IoT</span>
-                        </div>
-                        <div class="project-arrow">
-                            <i class="fas fa-arrow-right"></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </div>
     </section>
 
