@@ -9,9 +9,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         .project-page { min-height: 100vh; padding: 120px 0 60px; background: linear-gradient(135deg, #232526 0%, #414345 100%); }
-        .project-header { text-align: center; color: white; margin-bottom: 3rem; }
-        .project-title { font-size: 3rem; font-weight: 700; margin-bottom: 1rem; }
-        .project-subtitle { font-size: 1.2rem; opacity: 0.9; }
+        .project-header { text-align: center; color: #333; margin-bottom: 3rem; background: white; border-radius: 20px; padding: 3rem; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+        .project-title { font-size: 3rem; font-weight: 700; margin-bottom: 1rem; color: #333; }
+        .project-subtitle { font-size: 1.2rem; color: #666; }
         .back-button { position: fixed; top: 100px; left: 20px; background: rgba(255,255,255,0.9); color: #333; padding: 12px 20px; border-radius: 25px; text-decoration: none; font-weight: 600; transition: all 0.3s ease; z-index: 1000; backdrop-filter: blur(10px); }
         .back-button:hover { background: white; transform: translateY(-2px); box-shadow: 0 5px 15px rgba(0,0,0,0.2); }
         .description-section { background: white; border-radius: 20px; padding: 3rem; margin-bottom: 3rem; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
@@ -21,6 +21,10 @@
         .features-list li { color: #444; font-size: 1rem; margin-bottom: 0.7rem; }
         .project-image-section { background: white; border-radius: 20px; padding: 3rem; margin-bottom: 3rem; box-shadow: 0 10px 30px rgba(0,0,0,0.1); text-align: center; }
         .project-image { max-width: 30%; max-height: 400px; height: auto; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.1); }
+        .skills-section { background: white; border-radius: 20px; padding: 3rem; margin-bottom: 3rem; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+        .skills-section h2 { color: #333; font-size: 2rem; margin-bottom: 1.5rem; text-align: center; }
+        .skills-grid { display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; max-width: 800px; margin: 0 auto; }
+        .skill-tag { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 0.75rem 1.5rem; border-radius: 25px; font-size: 1rem; font-weight: 500; box-shadow: 0 3px 10px rgba(0,0,0,0.1); }
         @media (max-width: 768px) { .project-title { font-size: 2rem; } .back-button { position: relative; top: auto; left: auto; display: inline-block; margin-bottom: 2rem; } }
     </style>
 </head>
@@ -56,6 +60,20 @@
                     <li>Automatic tracking of interaction count, duration, location, and closest distance</li>
                     <li>2-meter contact detection radius for accurate proximity monitoring</li>
                 </ul>
+            </div>
+            <div class="skills-section">
+                <h2>Technologies & Skills</h2>
+                <div class="skills-grid">
+                    <span class="skill-tag">C</span>
+                    <span class="skill-tag">Python</span>
+                    <span class="skill-tag">Sensors</span>
+                    <span class="skill-tag">Bluetooth</span>
+                    <span class="skill-tag">WiFi</span>
+                    <span class="skill-tag">Linux</span>
+                    <span class="skill-tag">Real-Time Systems</span>
+                    <span class="skill-tag">AWS</span>
+                    <span class="skill-tag">Computer Vision</span>
+                </div>
             </div>
         </div>
     </section>
