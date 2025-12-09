@@ -38,15 +38,23 @@
             <div class="description-section">
                 <h2>About the Project</h2>
                 <p>
-                    The Wearable Disease Tracking Vest is an innovative health monitoring system designed to track and analyze human contact patterns throughout the day. Built with a Raspberry Pi as the central processing unit, this wearable device integrates multiple sensors to provide accurate, real-time data on interpersonal interactions and proximity events.
+                    The Wearable Disease Tracking Vest is an innovative health monitoring system designed to accurately track and analyze human contact patterns throughout the day. The system consists of four distributed subsystems that collect sensor data and transmit it to a central processing unit for comprehensive analysis.
+                </p>
+                <p>
+                    Each subsystem is equipped with a Raspberry Pi Zero 2, MLX90640 thermal camera, VL53L7CX time-of-flight distance sensor, and an Arducam day/night camera. These subsystems continuously monitor the environment and detect potential contacts within a 2-meter radius.
+                </p>
+                <p>
+                    The central system features a Raspberry Pi 5 and a GPS module for accurate location tracking. An OpenCV model running on the Pi 5 automatically processes the collected data to track the number of interactions, duration of each interaction, location of each interaction, and the closest distance reached per interaction.
                 </p>
                 <ul class="features-list">
-                    <li>Raspberry Pi-based processing unit for real-time data collection and analysis</li>
-                    <li>Multi-sensor array including proximity sensors, accelerometers, and environmental sensors</li>
-                    <li>Accurate contact detection and counting algorithms</li>
-                    <li>Daily interaction tracking with timestamp logging</li>
-                    <li>Wearable design optimized for comfort and functionality</li>
-                    <li>Data visualization and reporting capabilities</li>
+                    <li>Four distributed subsystems, each with Raspberry Pi Zero 2 for local data collection</li>
+                    <li>MLX90640 thermal camera for temperature-based detection</li>
+                    <li>VL53L7CX time-of-flight distance sensor for precise proximity measurement</li>
+                    <li>Arducam day/night camera for visual detection and verification</li>
+                    <li>Central Raspberry Pi 5 processing unit with GPS module for location tracking</li>
+                    <li>OpenCV-based computer vision model for automated interaction analysis</li>
+                    <li>Automatic tracking of interaction count, duration, location, and closest distance</li>
+                    <li>2-meter contact detection radius for accurate proximity monitoring</li>
                 </ul>
             </div>
         </div>
