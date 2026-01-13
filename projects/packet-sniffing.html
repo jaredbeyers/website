@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Packet Sniffing & Traffic Analysis - Project</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .project-page { min-height: 100vh; padding: 120px 0 60px; background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%); }
+        .project-header { text-align: center; color: white; margin-bottom: 3rem; }
+        .project-title { font-size: 3rem; font-weight: 700; margin-bottom: 1rem; }
+        .project-subtitle { font-size: 1.2rem; opacity: 0.9; }
+        .back-button { position: fixed; top: 100px; left: 20px; background: rgba(255,255,255,0.9); color: #333; padding: 12px 20px; border-radius: 25px; text-decoration: none; font-weight: 600; transition: all 0.3s ease; z-index: 1000; backdrop-filter: blur(10px); }
+        .back-button:hover { background: white; transform: translateY(-2px); box-shadow: 0 5px 15px rgba(0,0,0,0.2); }
+        .description-section { background: white; border-radius: 20px; padding: 3rem; margin-bottom: 3rem; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+        .description-section h2 { color: #333; font-size: 2rem; margin-bottom: 1.5rem; text-align: center; }
+        .description-section h3 { color: #2a5298; font-size: 1.5rem; margin-top: 2rem; margin-bottom: 1rem; }
+        .description-section p { color: #666; line-height: 1.8; font-size: 1.1rem; }
+        .description-section ul { color: #666; line-height: 1.8; font-size: 1.1rem; margin-left: 2rem; }
+        .description-section li { margin-bottom: 0.7rem; }
+        .features-list { margin: 2rem auto 0; max-width: 900px; }
+        .features-list li { color: #444; font-size: 1rem; margin-bottom: 0.7rem; }
+        .topology-diagram { background: #f8f9fa; border: 2px solid #e0e0e0; border-radius: 10px; padding: 2rem; margin: 2rem 0; text-align: center; font-family: monospace; }
+        .topology-diagram pre { margin: 0; color: #333; font-size: 0.9rem; }
+        .analysis-table { width: 100%; border-collapse: collapse; margin: 2rem 0; max-width: 900px; }
+        .analysis-table th, .analysis-table td { border: 1px solid #ddd; padding: 12px; text-align: left; }
+        .analysis-table th { background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%); color: white; font-weight: 600; }
+        .analysis-table tr:nth-child(even) { background: #f8f9fa; }
+        .tools-grid { display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; margin: 1.5rem 0; }
+        .tool-tag { background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%); color: white; padding: 0.75rem 1.5rem; border-radius: 25px; font-size: 1rem; font-weight: 500; box-shadow: 0 3px 10px rgba(0,0,0,0.1); }
+        .code-block { background: #2d2d2d; color: #f8f8f2; padding: 1.5rem; border-radius: 10px; margin: 1rem 0; font-family: 'Courier New', monospace; font-size: 0.9rem; overflow-x: auto; }
+        .code-block code { color: #f8f8f2; }
+        @media (max-width: 768px) { 
+            .project-title { font-size: 2rem; } 
+            .back-button { position: relative; top: auto; left: auto; display: inline-block; margin-bottom: 2rem; }
+            .analysis-table { font-size: 0.85rem; }
+            .topology-diagram pre { font-size: 0.75rem; }
+        }
+    </style>
+</head>
+<body>
+    <a href="../index.html#projects" class="back-button"><i class="fas fa-arrow-left"></i> Back to Projects</a>
+    <section class="project-page">
+        <div class="container">
+            <div class="project-header">
+                <h1 class="project-title">Packet Sniffing & Traffic Analysis</h1>
+                <p class="project-subtitle">Network+ Project: Capturing and analyzing network traffic in a virtual lab environment</p>
+            </div>
+
+            <div class="description-section">
+                <h2>Project Overview</h2>
+                <p>
+                    This project demonstrates practical application of Network+ skills through packet capturing and analysis in a virtual lab environment. 
+                    The goal is to capture and analyze network traffic between virtual machines to understand protocols, IP addressing, ports, and detect anomalies, 
+                    simulating real-world network monitoring tasks.
+                </p>
+            </div>
+
+            <div class="description-section">
+                <h2>Tools & Technologies</h2>
+                <div class="tools-grid">
+                    <span class="tool-tag">VirtualBox</span>
+                    <span class="tool-tag">Kali Linux</span>
+                    <span class="tool-tag">Wireshark</span>
+                    <span class="tool-tag">Windows/Linux VMs</span>
+                    <span class="tool-tag">Network Analysis</span>
+                </div>
+                <ul class="features-list">
+                    <li><strong>Virtualization:</strong> VirtualBox for creating isolated network environments</li>
+                    <li><strong>Operating Systems:</strong> Kali Linux (Wireshark VM), Windows/Linux VMs as traffic generators</li>
+                    <li><strong>Network Tool:</strong> Wireshark for packet capture and analysis</li>
+                    <li><strong>Other Tools:</strong> Ping, Browser, Optional: Local Web Server</li>
+                </ul>
+            </div>
+
+            <div class="description-section">
+                <h2>Network Setup</h2>
+                <h3>Topology</h3>
+                <div class="topology-diagram">
+                    <pre>+---------+          +---------+
+| VM1     |          | VM2     |
+| Kali    |----------| Windows |
+| (Wireshark)        |/Linux  |
++---------+          +---------+</pre>
+                </div>
+                <ul class="features-list">
+                    <li><strong>Network Type:</strong> Internal Network (VirtualBox) - "LabNet"</li>
+                    <li><strong>IP Addresses:</strong>
+                        <ul>
+                            <li>VM1 (Wireshark): 192.168.56.10</li>
+                            <li>VM2: 192.168.56.11</li>
+                            <li>VM3 (optional): 192.168.56.12</li>
+                        </ul>
+                    </li>
+                    <li><strong>Setup Steps:</strong>
+                        <ul>
+                            <li>Create VMs and assign them to the same internal network (LabNet)</li>
+                            <li>Verify connectivity via ping: <code>ping 192.168.56.11</code></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="description-section">
+                <h2>Packet Capture Procedure</h2>
+                <ol class="features-list" style="list-style-type: decimal;">
+                    <li>Open Wireshark on VM1</li>
+                    <li>Select the network interface connected to LabNet</li>
+                    <li>Start capturing traffic</li>
+                    <li>Generate network activity on VM2/VM3:
+                        <ul>
+                            <li>Ping other VMs: <code>ping 192.168.56.10</code></li>
+                            <li>Browse websites (if internet accessible)</li>
+                            <li>Optional: Run a small HTTP server on VM2 and connect from VM3</li>
+                        </ul>
+                    </li>
+                    <li>Apply filters in Wireshark to focus on traffic of interest:
+                        <div class="code-block">
+                            <code>ICMP: icmp<br>
+HTTP: http<br>
+Specific IP: ip.addr == 192.168.56.11</code>
+                        </div>
+                    </li>
+                    <li>Stop capture after sufficient traffic is observed</li>
+                    <li>Save capture as .pcap file for analysis</li>
+                </ol>
+            </div>
+
+            <div class="description-section">
+                <h2>Packet Analysis</h2>
+                <h3>Sample Analysis Table</h3>
+                <table class="analysis-table">
+                    <thead>
+                        <tr>
+                            <th>Packet #</th>
+                            <th>Source IP</th>
+                            <th>Destination IP</th>
+                            <th>Protocol</th>
+                            <th>Port</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>192.168.56.11</td>
+                            <td>192.168.56.10</td>
+                            <td>ICMP</td>
+                            <td>N/A</td>
+                            <td>Ping request</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>192.168.56.10</td>
+                            <td>192.168.56.11</td>
+                            <td>ICMP</td>
+                            <td>N/A</td>
+                            <td>Ping reply</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>192.168.56.11</td>
+                            <td>192.168.56.10</td>
+                            <td>TCP</td>
+                            <td>80</td>
+                            <td>HTTP GET request</td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>192.168.56.10</td>
+                            <td>192.168.56.11</td>
+                            <td>TCP</td>
+                            <td>80</td>
+                            <td>HTTP response</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <h3>Key Observations</h3>
+                <ul class="features-list">
+                    <li>ICMP packets demonstrate connectivity between VMs</li>
+                    <li>TCP packets show communication over HTTP (port 80)</li>
+                    <li>No unexpected traffic detected</li>
+                    <li>Source and destination IPs align with the lab topology</li>
+                </ul>
+            </div>
+
+            <div class="description-section">
+                <h2>Identifying Anomalies</h2>
+                <p>For practice, anomalies can be simulated to test detection capabilities:</p>
+                <ul class="features-list">
+                    <li><strong>Repeated ping floods:</strong> High ICMP traffic indicating potential DoS attempts</li>
+                    <li><strong>Unrecognized ports/protocols:</strong> Unknown services or potential security risks</li>
+                    <li><strong>DNS queries:</strong> Observation of DNS queries during browsing activities</li>
+                </ul>
+            </div>
+
+            <div class="description-section">
+                <h2>Lessons Learned</h2>
+                <ul class="features-list">
+                    <li>Understanding how protocols operate (ICMP, TCP, UDP, HTTP)</li>
+                    <li>How source/destination IPs and ports are used to route traffic</li>
+                    <li>Using Wireshark filters for focused analysis</li>
+                    <li>Basics of detecting suspicious network activity</li>
+                    <li>Network setup and IP addressing in a virtual environment</li>
+                    <li>Practical application of Network+ certification concepts</li>
+                </ul>
+            </div>
+
+            <div class="description-section">
+                <h2>Conclusion</h2>
+                <p>
+                    This lab demonstrates practical application of Network+ skills, including network setup and IP addressing in a virtual environment, 
+                    packet capturing and filtering with Wireshark, understanding protocols and ports, and identifying potential anomalies in network traffic. 
+                    The project provides hands-on experience with network monitoring tools and techniques essential for network administration and security analysis.
+                </p>
+            </div>
+        </div>
+    </section>
+    <script src="../script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const backButton = document.querySelector('.back-button');
+            if (backButton) {
+                backButton.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const url = this.getAttribute('href');
+                    document.body.style.transition = 'opacity 0.3s ease-out';
+                    document.body.style.opacity = '0';
+                    setTimeout(() => { window.location.href = url; }, 300);
+                });
+            }
+            document.body.style.opacity = '0';
+            document.body.style.transition = 'opacity 0.3s ease-in';
+            setTimeout(() => { document.body.style.opacity = '1'; }, 100);
+        });
+    </script>
+</body>
+</html>
